@@ -20,8 +20,8 @@ WORKDIR /app
 
 # Copy only necessary files
 COPY --from=builder /app/package.json ./
-COPY --from=build /app/node_modules ./node_modules
-COPY --from=build /app/dist ./dist
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/dist ./dist
 
 ENV NODE_ENV=production
 
