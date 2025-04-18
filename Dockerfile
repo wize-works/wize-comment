@@ -19,12 +19,9 @@ FROM node:22-alpine
 WORKDIR /app
 
 # Copy only necessary files
-COPY --from=builder /app/package.json ./
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/dist ./dist
-
-# Copy .env if you want to bake it in (not recommended for secrets)
-# COPY .env .env
+COPY --from=build /app/package.json ./
+COPY --from=build /app/node_modules ./node_modules
+COPY --from=build /app/dist ./dist
 
 ENV NODE_ENV=production
 

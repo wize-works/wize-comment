@@ -1,6 +1,6 @@
 {
     "name": "wize-comment",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "",
     "main": "server.ts",
     "scripts": {
@@ -12,7 +12,7 @@
     },
     "keywords": [],
     "author": "",
-    "license": "ISC",
+    "license": "MIT",
     "type": "module",
     "dependencies": {
         "@clerk/fastify": "^2.2.7",
