@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wize-comment
+  namespace: wizeworks
+  labels:
+    app: wize-comment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: wize-comment
+  template:
+    metadata:
+      labels:
+        app: wize-comment
+    spec:
+      containers:
+      - name: wize-comment
+        image: ${ACR_NAME}.azurecr.io/wize-comment:${IMAGE_TAG}
+        ports:
+        - containerPort: 8080
+        env:
+        - name: ENVIRONMENT
+          value: "production"
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "250m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
