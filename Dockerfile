@@ -19,7 +19,7 @@ FROM node:22-alpine
 WORKDIR /app
 
 # Copy only necessary files
-COPY --from=build /app/package.json ./
+COPY --from=builder /app/package.json ./
 COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/dist ./dist
 

@@ -42,7 +42,7 @@ jobs:
 
         - name: Docker Build and Tag
           run: |
-            docker build --no-cache --build-arg -t ${{ secrets.ACR_NAME }}.azurecr.io/${{ env.IMAGE_NAME }}:$VERSION .
+            docker build --no-cache -t ${{ secrets.ACR_NAME }}.azurecr.io/${{ env.IMAGE_NAME }}:$VERSION .
             docker tag ${{ secrets.ACR_NAME }}.azurecr.io/${{ env.IMAGE_NAME }}:$VERSION ${{ secrets.ACR_NAME }}.azurecr.io/${{ env.IMAGE_NAME }}:latest
 
         - name: Docker Push
@@ -67,6 +67,9 @@ jobs:
           env:
             IMAGE_TAG: ${{ env.VERSION }}
             ACR_NAME: ${{ secrets.ACR_NAME }}
+            SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+            SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+            SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
             
         - name: Deploy to AKS
           run: |
