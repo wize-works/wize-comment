@@ -31,7 +31,7 @@ export const getContext = async (req: FastifyRequest): Promise<Context> => {
             .from('api_keys')
             .update({ last_used_at: new Date() })
             .eq('key', apiKey);
-    } catch (updateError) {
+    } catch (updateError: any) {
         Sentry.captureMessage('⚠️ Failed to update last_used_at:', updateError);
         Sentry.captureException(updateError);
     }

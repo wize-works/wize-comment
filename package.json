@@ -1,19 +1,19 @@
 {
     "name": "wize-comment",
     "version": "1.0.1",
-    "description": "",
-    "main": "server.ts",
+    "description": "Multi-tenant GraphQL API for handling comment threads",
+    "main": "dist/server.js",
+    "type": "commonjs",
     "scripts": {
         "dev": "tsx src/server.ts",
-        "start": "node dist/server.ts",
         "build": "tsc",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "seed": "tsx scripts/seed-api-keys.ts"
+        "start": "node dist/server.js",
+        "typecheck": "tsc --noEmit",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
     "author": "",
     "license": "MIT",
-    "type": "module",
     "dependencies": {
         "@clerk/fastify": "^2.2.7",
         "@sentry/node": "^9.13.0",

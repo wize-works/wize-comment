@@ -24,7 +24,7 @@ export const comments = {
     args: {
         postId: { type: new GraphQLNonNull(GraphQLString) }
     },
-    resolve: async (_parent, args, context: Context) => {
+    resolve: async (_parent: any, args: { postId: any; }, context: Context) => {
         if (!context.scopes.includes('comments:read')) {
             throw new Error('Unauthorized: missing comments:read scope');
         }
@@ -52,7 +52,7 @@ export const addComment = {
         content: { type: new GraphQLNonNull(GraphQLString) },
         parentId: { type: GraphQLID }
     },
-    resolve: async (_parent, args, context: Context) => {
+    resolve: async (_parent: any, args: { postId: any; content: any; parentId: any; }, context: Context) => {
         if (!context.scopes.includes('comments:write')) {
             throw new Error('Unauthorized: missing comments:write scope');
         }
@@ -81,7 +81,7 @@ export const deleteComment = {
     args: {
         id: { type: new GraphQLNonNull(GraphQLID) }
     },
-    resolve: async (_parent, args, context: Context) => {
+    resolve: async (_parent: any, args: { id: any; }, context: Context) => {
         if (!context.scopes.includes('comments:delete')) {
             throw new Error('Unauthorized: missing comments:delete scope');
         }
