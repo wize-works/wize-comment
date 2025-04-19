@@ -30,8 +30,7 @@ process.on('uncaughtException', (err) => {
 
 app.get('/', async (request, reply) => {
     return { message: 'Welcome to the Comments API!' };
-}
-);
+});
 
 app.listen({ port: 4000 }, (err, address) => {
     if (err) {
