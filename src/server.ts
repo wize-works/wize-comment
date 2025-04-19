@@ -28,6 +28,11 @@ process.on('uncaughtException', (err) => {
     Sentry.captureException(err);
 });
 
+app.get('/', async (request, reply) => {
+    return { message: 'Welcome to the Comments API!' };
+}
+);
+
 app.listen({ port: 4000 }, (err, address) => {
     if (err) {
         Sentry.captureException(err);

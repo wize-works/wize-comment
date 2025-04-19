@@ -1,4 +1,4 @@
-export interface Context {
+export interface AuthContext {  // maybe call this AuthContext
     user: {
         id: string;
     };

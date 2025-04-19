@@ -1,9 +1,9 @@
 import { FastifyRequest } from 'fastify';
 import { supabase } from '../lib/supabase';
-import { Context } from '../types/context';
+import { AuthContext } from '../types/auth-context';
 import Sentry from '../lib/sentry';
 
-export const getContext = async (req: FastifyRequest): Promise<Context> => {
+export const getContext = async (req: FastifyRequest): Promise<AuthContext> => {
     const apiKey = (req.headers['wize-api-key'] as string)?.trim();
 
     if (!apiKey) {
@@ -44,4 +44,4 @@ export const getContext = async (req: FastifyRequest): Promise<Context> => {
 };
 
 // Optional helper for resolver scope checks
-export const hasScope = (ctx: Context, scope: string) => ctx.scopes?.includes(scope);
+export const hasScope = (ctx: AuthContext, scope: string) => ctx.scopes?.includes(scope);
