@@ -15,7 +15,8 @@ Sentry.setupFastifyErrorHandler(app);
 app.register(mercurius, {
     schema,
     graphiql: true,
-    context: getContext
+    context: getContext,
+    path: '/graphql',
 });
 
 process.on('unhandledRejection', (err) => {
@@ -28,8 +29,10 @@ process.on('uncaughtException', (err) => {
     Sentry.captureException(err);
 });
 
-app.get('/', async (request, reply) => {
-    return { message: 'Welcome to the Comments API!' };
+app.setNotFoundHandler((request, reply) => {
+    const error = new Error(`Route ${request.method} ${request.url} not found`);
+    Sentry.captureException(error);
+    reply.status(404).send({ error: 'Not Found' });
 });
 
 app.listen({ port: 4000 }, (err, address) => {
