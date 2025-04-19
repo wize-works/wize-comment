@@ -2,7 +2,7 @@
 import { GraphQLObjectType, GraphQLString, GraphQLID, GraphQLBoolean, GraphQLList, GraphQLNonNull } from 'graphql';
 import { GraphQLDateTime } from 'graphql-scalars';
 import { supabase } from '../lib/supabase';
-import { Context } from '../types/context';
+import { AuthContext } from '../types/auth-context';
 
 // Comment Type
 export const CommentType = new GraphQLObjectType({
@@ -24,7 +24,7 @@ export const comments = {
     args: {
         postId: { type: new GraphQLNonNull(GraphQLString) }
     },
-    resolve: async (_parent: any, args: { postId: any; }, context: Context) => {
+    resolve: async (_parent: any, args: { postId: any; }, context: AuthContext) => {
         if (!context.scopes.includes('comments:read')) {
             throw new Error('Unauthorized: missing comments:read scope');
         }
@@ -52,7 +52,7 @@ export const addComment = {
         content: { type: new GraphQLNonNull(GraphQLString) },
         parentId: { type: GraphQLID }
     },
-    resolve: async (_parent: any, args: { postId: any; content: any; parentId: any; }, context: Context) => {
+    resolve: async (_parent: any, args: { postId: any; content: any; parentId: any; }, context: AuthContext) => {
         if (!context.scopes.includes('comments:write')) {
             throw new Error('Unauthorized: missing comments:write scope');
         }
@@ -69,7 +69,6 @@ export const addComment = {
             created_at: new Date().toISOString()
         }).select().single();
 
-        console.log('comments', data, error);
         if (error) throw new Error(error.message);
         return data;
     }
@@ -81,7 +80,7 @@ export const deleteComment = {
     args: {
         id: { type: new GraphQLNonNull(GraphQLID) }
     },
-    resolve: async (_parent: any, args: { id: any; }, context: Context) => {
+    resolve: async (_parent: any, args: { id: any; }, context: AuthContext) => {
         if (!context.scopes.includes('comments:delete')) {
             throw new Error('Unauthorized: missing comments:delete scope');
         }
