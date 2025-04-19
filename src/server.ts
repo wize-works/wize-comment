@@ -28,7 +28,10 @@ process.on('uncaughtException', (err) => {
     console.error('Uncaught Exception:', err);
     Sentry.captureException(err);
 });
-
+app.addHook('onRequest', (request, reply, done) => {
+    console.log(`Request received: ${request.method} ${request.url}`);
+    done();
+});
 app.setNotFoundHandler((request, reply) => {
     const error = new Error(`Route ${request.method} ${request.url} not found`);
     Sentry.captureException(error);
