@@ -9,7 +9,10 @@
         "build": "tsc",
         "start": "node dist/server.js",
         "typecheck": "tsc --noEmit",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "patchversion": "npm version patch",
+        "minorversion": "npm version minor",
+        "majorversion": "npm version major"
     },
     "keywords": [],
     "author": "",
