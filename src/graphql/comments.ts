@@ -30,14 +30,14 @@ export const comments = {
         }
 
         const { tenantId } = context;
-        await supabase.rpc('set_config', { key: 'app.tenant_id', value: tenantId });
+        await supabase.rpc('set_config', { key: 'app.tenantId', value: tenantId });
 
         const { data, error } = await supabase
             .schema('api')
             .from('comments')
             .select('*')
-            .eq('post_id', args.postId)
-            .order('created_at', { ascending: true });
+            .eq('postId', args.postId)
+            .order('createdAt', { ascending: true });
 
         if (error) throw new Error(error.message);
         return data;
@@ -58,7 +58,7 @@ export const addComment = {
         }
 
         const { user, tenantId } = context;
-        await supabase.rpc('set_config', { key: 'app.tenant_id', value: tenantId });
+        await supabase.rpc('set_config', { key: 'app.tenantId', value: tenantId });
 
         const { data, error } = await supabase.schema('api').from('comments').insert({
             post_id: args.postId,
@@ -86,13 +86,13 @@ export const deleteComment = {
         }
 
         const { user, tenantId } = context;
-        await supabase.rpc('set_config', { key: 'app.tenant_id', value: tenantId });
+        await supabase.rpc('set_config', { key: 'app.tenantId', value: tenantId });
 
         const { error } = await supabase
             .schema('api')
             .from('comments')
             .update({ is_deleted: true })
-            .match({ id: args.id, user_id: user.id });
+            .match({ id: args.id, userId: user.id });
 
         if (error) throw new Error(error.message);
         return true;
