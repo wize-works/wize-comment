@@ -37,7 +37,7 @@ export const comments = {
             .from('comments')
             .select('*')
             .eq('post_id', args.postId)
-            .order('created_at', { ascending: true });
+            .order('createdAt', { ascending: true });
 
         if (error) throw new Error(error.message);
         return data;
@@ -66,7 +66,7 @@ export const addComment = {
             parent_id: args.parentId || null,
             user_id: user.id,
             tenant_id: tenantId,
-            created_at: new Date().toISOString()
+            createdAt: new Date().toISOString()
         }).select().single();
 
         if (error) throw new Error(error.message);
