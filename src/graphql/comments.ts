@@ -3,20 +3,7 @@ import { GraphQLObjectType, GraphQLString, GraphQLID, GraphQLBoolean, GraphQLLis
 import { GraphQLDateTime } from 'graphql-scalars';
 import { supabase } from '../lib/supabase';
 import { AuthContext } from '../types/auth-context';
-
-// Comment Type
-export const CommentType = new GraphQLObjectType({
-    name: 'Comment',
-    fields: () => ({
-        id: { type: new GraphQLNonNull(GraphQLID) },
-        postId: { type: new GraphQLNonNull(GraphQLString) },
-        content: { type: new GraphQLNonNull(GraphQLString) },
-        parentId: { type: GraphQLID },
-        userId: { type: new GraphQLNonNull(GraphQLID) },
-        createdAt: { type: new GraphQLNonNull(GraphQLDateTime) },
-        isDeleted: { type: GraphQLBoolean }
-    })
-});
+import { CommentType } from '../types/content-type';
 
 // Query: Get comments for a post
 export const comments = {
@@ -50,9 +37,10 @@ export const addComment = {
     args: {
         postId: { type: new GraphQLNonNull(GraphQLString) },
         content: { type: new GraphQLNonNull(GraphQLString) },
+        name: { type: GraphQLString },
         parentId: { type: GraphQLID }
     },
-    resolve: async (_parent: any, args: { postId: any; content: any; parentId: any; }, context: AuthContext) => {
+    resolve: async (_parent: any, args: { postId: any; content: any; name: any; parentId: any; }, context: AuthContext) => {
         if (!context.scopes.includes('comments:write')) {
             throw new Error('Unauthorized: missing comments:write scope');
         }
@@ -65,6 +53,7 @@ export const addComment = {
             content: args.content,
             parentId: args.parentId || null,
             userId: user.id,
+            name: args.name || null,
             tenantId: tenantId,
             createdAt: new Date().toISOString()
         }).select().single();
