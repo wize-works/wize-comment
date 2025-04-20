@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: wize-comment-service
-  namespace: development
+  namespace: wizeworks
   labels:
     app: wize-comment
 spec:
