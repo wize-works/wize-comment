@@ -39,7 +39,7 @@ app.setNotFoundHandler((request, reply) => {
     reply.status(404).send({ error: 'Not Found' });
 });
 
-app.listen({ port: 4000 }, (err, address) => {
+app.listen({ port: 4000, host: '0.0.0.0' }, (err, address) => {
     if (err) {
         Sentry.captureException(err);
         console.error(err);
