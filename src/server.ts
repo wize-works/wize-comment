@@ -32,13 +32,14 @@ app.addHook('onRequest', (request, reply, done) => {
     console.log(`Request received: ${request.method} ${request.url}`);
     done();
 });
+
 app.setNotFoundHandler((request, reply) => {
     const error = new Error(`Route ${request.method} ${request.url} not found`);
     Sentry.captureException(error);
     reply.status(404).send({ error: 'Not Found' });
 });
 
-app.listen({ port: 4000 }, (err, address) => {
+app.listen({ port: 4000, host: '0.0.0.0' }, (err, address) => {
     if (err) {
         Sentry.captureException(err);
         console.error(err);
