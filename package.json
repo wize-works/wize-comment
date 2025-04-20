@@ -1,6 +1,6 @@
 {
     "name": "wize-comment",
-    "version": "1.0.17",
+    "version": "1.0.18",
     "description": "Multi-tenant GraphQL API for handling comment threads",
     "main": "dist/server.js",
     "type": "commonjs",
