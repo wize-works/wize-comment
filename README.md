@@ -90,7 +90,7 @@ This app is meant to run as a backend microservice. You can deploy it to:
 ## 🧩 Notes
 - Comments are soft-deleted using `is_deleted`
 - All Supabase access uses `schema('api')` to respect schema restrictions
-- `last_used_at` is updated on each valid API key use
+- `lastUsedAt` is updated on each valid API key use
 
 ---
 
