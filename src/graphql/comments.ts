@@ -61,12 +61,12 @@ export const addComment = {
         await supabase.rpc('set_config', { key: 'app.tenantId', value: tenantId });
 
         const { data, error } = await supabase.schema('api').from('comments').insert({
-            post_id: args.postId,
+            postId: args.postId,
             content: args.content,
-            parent_id: args.parentId || null,
-            user_id: user.id,
-            tenant_id: tenantId,
-            created_at: new Date().toISOString()
+            parentId: args.parentId || null,
+            userId: user.id,
+            tenantId: tenantId,
+            createdAt: new Date().toISOString()
         }).select().single();
 
         if (error) throw new Error(error.message);
@@ -91,7 +91,7 @@ export const deleteComment = {
         const { error } = await supabase
             .schema('api')
             .from('comments')
-            .update({ is_deleted: true })
+            .update({ isDeleted: true })
             .match({ id: args.id, userId: user.id });
 
         if (error) throw new Error(error.message);
