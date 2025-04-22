@@ -19,7 +19,7 @@ Sentry.setupFastifyErrorHandler(app);
 let schema: GraphQLSchema;
 
 try {
-    schema = buildUnifiedGraphQLSchemaFromFolder(path.join(__dirname, 'models'));
+    schema = buildUnifiedGraphQLSchemaFromFolder('./models');
 
     const { validateSchema } = require('graphql');
     const errors = validateSchema(schema);
