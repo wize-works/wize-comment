@@ -8,13 +8,37 @@ import { authContext } from './lib/auth';
 
 import { buildUnifiedGraphQLSchemaFromFolder } from '@wizeworks/graphql-factory';
 import path from 'path';
+import { GraphQLObjectType, GraphQLSchema } from 'graphql';
 
 
 const app = Fastify();
 const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 80;
 
 Sentry.setupFastifyErrorHandler(app);
-const schema = buildUnifiedGraphQLSchemaFromFolder(path.join(__dirname, 'models'));
+
+let schema: GraphQLSchema;
+
+try {
+    schema = buildUnifiedGraphQLSchemaFromFolder(path.join(__dirname, 'models'));
+
+    const { validateSchema } = require('graphql');
+    const errors = validateSchema(schema);
+    if (errors.length > 0) {
+        console.warn('[GraphQL] Invalid GraphQL schema:', errors);
+        throw new Error('Schema validation failed');
+    }
+
+} catch (err) {
+    console.error('[GraphQL] Failed to build schema — falling back to dummy schema', err);
+    Sentry.captureException(err);
+
+    schema = new GraphQLSchema({
+        query: new GraphQLObjectType({
+            name: 'Query',
+            fields: {}
+        })
+    });
+}
 
 app.register(mercurius, {
     schema: schema,
