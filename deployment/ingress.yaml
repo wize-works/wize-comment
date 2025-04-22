@@ -1,26 +1,11 @@
-apiVersion: cert-manager.io/v1
-kind: ClusterIssuer
-metadata:
-  name: wizeworks-encrypt
-spec:
-  acme:
-    email: support@jobsight.co
-    server: https://acme-v02.api.letsencrypt.org/directory
-    privateKeySecretRef:
-      name: wizeworks-encrypt-account-key
-    solvers:
-      - http01:
-          ingress:
-            class: nginx
----
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: wize-comment-ingress
-  namespace: wizeworks
+  namespace: development
   annotations:
     kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: wizeworks-encrypt
+    cert-manager.io/cluster-issuer: letsencrypt-brandonkorous
     nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   ingressClassName: nginx
@@ -32,7 +17,7 @@ spec:
     - host: api.wize.works
       http:
         paths:
-          - path: /comment(/|$)(.*)
+          - path: /wize-comment(/|$)(.*)
             pathType: Prefix
             backend:
               service:
