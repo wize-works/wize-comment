@@ -1,5 +1,13 @@
-import { GraphQLModel } from "@wizeworks/graphql-factory/*";
-const CommentModel: GraphQLModel = {
+/**
+ * @typedef {Object} GraphQLModel
+ * @property {string} name
+ * @property {Object} fields
+ */
+
+/**
+ * @type {GraphQLModel}
+ */
+const CommentModel = {
     name: 'Comment',
     fields: {
         id: { type: 'uuid', required: true, defaultValue: 'uuid()' },
