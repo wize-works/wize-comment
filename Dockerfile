@@ -26,5 +26,5 @@ COPY --from=builder /app/dist/models ./dist/models
 
 
 ENV NODE_ENV=production
-
+EXPOSE 80
 CMD ["node", "dist/server.js"]
