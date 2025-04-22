@@ -4,33 +4,29 @@ import Sentry from './lib/sentry';
 
 import Fastify from 'fastify';
 import mercurius from 'mercurius';
-import { schema } from './graphql/schema';
-import { getContext } from './graphql/context';
+import { authContext } from './lib/auth';
+
+import { buildUnifiedGraphQLSchemaFromFolder } from '@wizeworks/graphql-factory';
+import path from 'path';
 
 
 const app = Fastify();
+const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 80;
 
 Sentry.setupFastifyErrorHandler(app);
+const schema = buildUnifiedGraphQLSchemaFromFolder(path.join(__dirname, 'models'));
 
 app.register(mercurius, {
-    schema,
+    schema: schema,
     graphiql: true,
-    context: getContext,
     path: '/graphql',
+    context: authContext,
 });
 
-process.on('unhandledRejection', (err) => {
-    console.error('Unhandled Rejection:', err);
-    Sentry.captureException(err);
-});
-
-process.on('uncaughtException', (err) => {
-    console.error('Uncaught Exception:', err);
-    Sentry.captureException(err);
-});
-app.addHook('onRequest', (request, reply, done) => {
-    console.log(`Request received: ${request.method} ${request.url}`);
-    done();
+app.setErrorHandler((error, request, reply) => {
+    console.error('Error occurred:', error);
+    Sentry.captureException(error);
+    reply.status(500).send({ error: 'Internal Server Error' });
 });
 
 app.setNotFoundHandler((request, reply) => {
@@ -39,11 +35,11 @@ app.setNotFoundHandler((request, reply) => {
     reply.status(404).send({ error: 'Not Found' });
 });
 
-app.listen({ port: 4000, host: '0.0.0.0' }, (err, address) => {
+app.listen({ port: port }, (err, address) => {
     if (err) {
         Sentry.captureException(err);
         console.error(err);
         process.exit(1);
     }
-    console.log(`🚀 Comments API ready at ${address}/graphql`);
+    console.log(`🚀 wize-comment API ready on port ${port}`);
 });
