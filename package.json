@@ -1,6 +1,6 @@
 {
     "name": "wize-comment",
-    "version": "1.1.15",
+    "version": "1.1.16",
     "description": "WizeWorks Comment API",
     "main": "dist/server.js",
     "type": "commonjs",
