@@ -19,14 +19,17 @@ spec:
       - name: wize-comment
         image: ${ACR_NAME}.azurecr.io/wize-comment:${IMAGE_TAG}
         ports:
-        - containerPort: 80
+        - containerPort: 3000
+        securityContext:
+          runAsNonRoot: true
+          runAsUser: 1000
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
         env:
         - name: ENVIRONMENT
           value: "production"
-        - name: SUPABASE_URL
-          value: "${SUPABASE_URL}"
-        - name: SUPABASE_KEY
-          value: "${SUPABASE_KEY}"
+        - name: MONGO_URI
+          value: "${MONGO_URI}"
         - name: SENTRY_DSN
           value: "${SENTRY_DSN}"
         resources:
