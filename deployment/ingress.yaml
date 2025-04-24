@@ -39,4 +39,4 @@ spec:
               service:
                 name: wize-comment-service
                 port:
-                  number: 80
+                  number: 3000
