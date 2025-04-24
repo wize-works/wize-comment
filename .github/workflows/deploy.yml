@@ -67,8 +67,7 @@ jobs:
           env:
             IMAGE_TAG: ${{ env.VERSION }}
             ACR_NAME: ${{ secrets.ACR_NAME }}
-            SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-            SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+            MONGO_URI: ${{ secrets.MONGO_URI }}
             SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
             
         - name: Deploy to AKS
