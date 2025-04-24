@@ -9,10 +9,7 @@
         "build": "tsc",
         "start": "node dist/server.js",
         "typecheck": "tsc --noEmit",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "patchversion": "npm version patch",
-        "minorversion": "npm version minor",
-        "majorversion": "npm version major"
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
     "author": "WizeWorks",
@@ -31,6 +28,10 @@
         "mongodb": "^6.16.0"
     },
     "devDependencies": {
+        "semantic-release": "^24.2.3",
+        "@semantic-release/changelog": "^6.0.3",
+        "@semantic-release/git": "^10.0.1",
+        "@semantic-release/github": "^11.0.1",
         "@types/node": "^22.14.1",
         "nodemon": "^3.1.9",
         "ts-node": "^10.9.2",
