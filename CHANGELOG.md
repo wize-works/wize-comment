@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/wize-works/wize-comment/compare/v1.1.2...v1.1.3) (2025-04-25)
+
+
+### Bug Fixes
+
+* add GitHub token to kubelogin installation step ([2a16909](https://github.com/wize-works/wize-comment/commit/2a169094b28ea8fb9858caf431276f06c127e162))
+
 ## [1.1.2](https://github.com/wize-works/wize-comment/compare/v1.1.1...v1.1.2) (2025-04-25)
 
 
