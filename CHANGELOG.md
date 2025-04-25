@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/wize-works/wize-comment/compare/v1.1.0...v1.1.1) (2025-04-25)
+
+
+### Bug Fixes
+
+* remove unnecessary model files copy from Dockerfile ([b16143b](https://github.com/wize-works/wize-comment/commit/b16143bbd6b8404dca54e1b10c56ec85b0d73a65))
+
 # [1.1.0](https://github.com/wize-works/wize-comment/compare/v1.0.0...v1.1.0) (2025-04-25)
 
 
