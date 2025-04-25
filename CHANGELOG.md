@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/wize-works/wize-comment/compare/v1.0.0...v1.1.0) (2025-04-25)
+
+
+### Features
+
+* update dependencies and refactor server setup ([ab54fd4](https://github.com/wize-works/wize-comment/commit/ab54fd45a83157021fe26ff873e8258410df6449))
+
 # 1.0.0 (2025-04-24)
 
 
