@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/wize-works/wize-comment/compare/v1.1.1...v1.1.2) (2025-04-25)
+
+
+### Bug Fixes
+
+* replace manual kubelogin installation with action usage ([ee88d82](https://github.com/wize-works/wize-comment/commit/ee88d82761cf05b48db6b6de6f19e37c57477bf9))
+
 ## [1.1.1](https://github.com/wize-works/wize-comment/compare/v1.1.0...v1.1.1) (2025-04-25)
 
 
