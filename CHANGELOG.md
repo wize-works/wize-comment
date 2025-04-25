@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/wize-works/wize-comment/compare/v1.1.4...v1.1.5) (2025-04-25)
+
+
+### Bug Fixes
+
+* add permissions for deployments in AKS deployment job ([3db0992](https://github.com/wize-works/wize-comment/commit/3db0992d23033c6debd50faab7bf07e033afa01b))
+
 ## [1.1.4](https://github.com/wize-works/wize-comment/compare/v1.1.3...v1.1.4) (2025-04-25)
 
 
