@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/wize-works/wize-comment/compare/v1.1.3...v1.1.4) (2025-04-25)
+
+
+### Bug Fixes
+
+* correct environment variable name for GitHub token in kubelogin installation ([0b0b8ce](https://github.com/wize-works/wize-comment/commit/0b0b8ce36d00add2bfacca9295e61ee2dc8e36c9))
+
 ## [1.1.3](https://github.com/wize-works/wize-comment/compare/v1.1.2...v1.1.3) (2025-04-25)
 
 
