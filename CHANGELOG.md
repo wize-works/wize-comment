@@ -1,3 +1,10 @@
+## [1.1.8](https://github.com/wize-works/wize-comment/compare/v1.1.7...v1.1.8) (2025-04-26)
+
+
+### Bug Fixes
+
+* add environment variables for kubelogin installation in deploy workflow ([1161d47](https://github.com/wize-works/wize-comment/commit/1161d47450d82953097c4ce18f01984099780ef3))
+
 ## [1.1.7](https://github.com/wize-works/wize-comment/compare/v1.1.6...v1.1.7) (2025-04-26)
 
 
