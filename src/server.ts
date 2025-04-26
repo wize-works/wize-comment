@@ -12,7 +12,8 @@ const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/';
 
 const mongoClient = new MongoClient(MONGO_URI);
 
-(async () => {
+
+const start = async () => {
     await mongoClient.connect();
 
     const yoga = createYoga({
@@ -40,4 +41,6 @@ const mongoClient = new MongoClient(MONGO_URI);
     app.listen(port, () => {
         console.log(`🚀 wize-comment API ready at http://localhost:${port}/graphql`);
     });
-})();
+};
+
+start();
