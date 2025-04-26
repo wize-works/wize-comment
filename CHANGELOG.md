@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/wize-works/wize-comment/compare/v1.2.0...v1.3.0) (2025-04-26)
+
+
+### Features
+
+* add DB_NAME environment variable to deployment configurations ([7c08285](https://github.com/wize-works/wize-comment/commit/7c08285ddcc81f1aa7a5ea850a6a2d0e7af36907))
+
 # [1.2.0](https://github.com/wize-works/wize-comment/compare/v1.1.9...v1.2.0) (2025-04-26)
 
 
