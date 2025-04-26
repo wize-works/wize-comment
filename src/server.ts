@@ -18,7 +18,7 @@ const start = async () => {
 
     const yoga = createYoga({
         graphqlEndpoint: '/graphql',
-        schema: (args) => createServerSchema(args.request, mongoClient),
+        schema: (args) => createServerSchema(args.request, mongoClient,dbName),
         context: async ({request}) => {
             const baseContext = await createServerContext(request, mongoClient);
             return {
