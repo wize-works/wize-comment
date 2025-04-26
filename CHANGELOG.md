@@ -1,3 +1,10 @@
+## [1.1.6](https://github.com/wize-works/wize-comment/compare/v1.1.5...v1.1.6) (2025-04-26)
+
+
+### Bug Fixes
+
+* update IMAGE_NAME in deploy.yml to match project name ([f962eff](https://github.com/wize-works/wize-comment/commit/f962eff6ab487bfcc06711d00b08de443a576deb))
+
 ## [1.1.5](https://github.com/wize-works/wize-comment/compare/v1.1.4...v1.1.5) (2025-04-25)
 
 
