@@ -8,7 +8,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: __PROJECT_NAME__
+  IMAGE_NAME: wize-comment
 
 jobs:
   release:
