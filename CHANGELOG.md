@@ -1,3 +1,10 @@
+## [1.1.7](https://github.com/wize-works/wize-comment/compare/v1.1.6...v1.1.7) (2025-04-26)
+
+
+### Bug Fixes
+
+* correct formatting of authors label in Docker image metadata ([90737c1](https://github.com/wize-works/wize-comment/commit/90737c16018075c2a44d88dbce51f56e50693247))
+
 ## [1.1.6](https://github.com/wize-works/wize-comment/compare/v1.1.5...v1.1.6) (2025-04-26)
 
 
