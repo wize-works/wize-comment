@@ -1,3 +1,10 @@
+## [1.1.9](https://github.com/wize-works/wize-comment/compare/v1.1.8...v1.1.9) (2025-04-26)
+
+
+### Bug Fixes
+
+* wrap image string in quotes for proper parsing ([6444c2b](https://github.com/wize-works/wize-comment/commit/6444c2b64f5ea4c65b6b6ea4df978a4c12d601d0))
+
 ## [1.1.8](https://github.com/wize-works/wize-comment/compare/v1.1.7...v1.1.8) (2025-04-26)
 
 
