@@ -1,3 +1,17 @@
+## [1.4.2](https://github.com/wize-works/wize-comment/compare/v1.4.1...v1.4.2) (2025-04-27)
+
+
+### Bug Fixes
+
+* update @wizeworks/graphql-factory-mongo to version 1.20.2 and refactor database variable naming in server.ts ([618db57](https://github.com/wize-works/wize-comment/commit/618db57c18f221077aaf2e3d33d14bf443f6c8d8))
+
+## [1.4.1](https://github.com/wize-works/wize-comment/compare/v1.4.0...v1.4.1) (2025-04-27)
+
+
+### Bug Fixes
+
+* implemented table naming convention controls to streamline connecting schemas to tables. ([018282b](https://github.com/wize-works/wize-comment/commit/018282b3c56f6f39b2d38c244e86dd12c0ab0198))
+
 # [1.4.0](https://github.com/wize-works/wize-comment/compare/v1.3.1...v1.4.0) (2025-04-27)
 
 
