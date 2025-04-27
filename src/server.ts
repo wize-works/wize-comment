@@ -44,7 +44,7 @@ const start = async () => {
         graphqlEndpoint: '/graphql',
         schema: async (args) => {
             if(!currentSchemas) {
-                currentSchemas = createServerSchema(args.request, mongoClient,database),
+                currentSchemas = createServerSchema(args.request, mongoClient,database);
             }
             return currentSchemas;
         },
