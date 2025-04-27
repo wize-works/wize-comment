@@ -1,3 +1,10 @@
+## [1.4.5](https://github.com/wize-works/wize-comment/compare/v1.4.4...v1.4.5) (2025-04-27)
+
+
+### Bug Fixes
+
+* correct syntax error in schema initialization in server.ts ([fd2f4f8](https://github.com/wize-works/wize-comment/commit/fd2f4f856825ed5e12ea27b0b9ddac9c6acd8147))
+
 ## [1.4.4](https://github.com/wize-works/wize-comment/compare/v1.4.3...v1.4.4) (2025-04-27)
 
 
