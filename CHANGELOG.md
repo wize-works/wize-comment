@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/wize-works/wize-comment/compare/v1.3.1...v1.4.0) (2025-04-27)
+
+
+### Features
+
+* update @wizeworks/graphql-factory-mongo to version 1.20.0 ([eb5186f](https://github.com/wize-works/wize-comment/commit/eb5186fd531103866ed36999c2cf8de6d0919b3d))
+
 ## [1.3.1](https://github.com/wize-works/wize-comment/compare/v1.3.0...v1.3.1) (2025-04-26)
 
 
