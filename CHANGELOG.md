@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/wize-works/wize-comment/compare/v1.4.3...v1.4.4) (2025-04-27)
+
+
+### Bug Fixes
+
+* update @wizeworks/graphql-factory-mongo to version 1.21.0 and enhance logging functionality in server.ts ([3b0f1dc](https://github.com/wize-works/wize-comment/commit/3b0f1dc0954681ce7bad3aae708e87ed0d5ac9e9))
+
 ## [1.4.3](https://github.com/wize-works/wize-comment/compare/v1.4.2...v1.4.3) (2025-04-27)
 
 
