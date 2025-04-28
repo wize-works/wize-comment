@@ -18,8 +18,8 @@ let currentSchemas: any = null;
 
 const start = async () => {
     await mongoClient.connect();
-    logger.info('MongoDB connected');
-    logger.info(`Using database: ${database}`);
+    logger.info?.('MongoDB connected');
+    logger.info?.(`Using database: ${database}`);
 
     const yoga = createYoga({
         graphqlEndpoint: '/graphql',

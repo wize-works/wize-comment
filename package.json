@@ -18,15 +18,14 @@
         "@graphql-yoga/node": "^3.9.1",
         "@sentry/node": "^9.13.0",
         "@sentry/profiling-node": "^9.13.0",
-        "@wizeworks/graphql-factory-mongo": "^1.21.1",
+        "@wizeworks/graphql-factory-mongo": "^1.21.3",
         "chalk": "^5.4.1",
         "dotenv": "^16.5.0",
         "express": "^5.1.0",
         "graphql": "^16.10.0",
         "graphql-scalars": "^1.24.2",
         "graphql-subscriptions": "^3.0.0",
-        "graphql-yoga": "^5.13.4",
-        "mongodb": "^6.16.0"
+        "graphql-yoga": "^5.13.4"
     },
     "devDependencies": {
         "@semantic-release/changelog": "^6.0.3",
