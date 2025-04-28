@@ -1,3 +1,10 @@
+## [1.4.7](https://github.com/wize-works/wize-comment/compare/v1.4.6...v1.4.7) (2025-04-28)
+
+
+### Bug Fixes
+
+* update @wizeworks/graphql-factory-mongo to version 1.21.3 and add optional chaining to logger calls ([9ab3d1c](https://github.com/wize-works/wize-comment/commit/9ab3d1c7344b015e6711c46b1d6ba9a446cc7b82))
+
 ## [1.4.6](https://github.com/wize-works/wize-comment/compare/v1.4.5...v1.4.6) (2025-04-27)
 
 
