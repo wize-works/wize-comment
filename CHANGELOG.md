@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/wize-works/wize-comment/compare/v1.4.8...v1.5.0) (2025-04-28)
+
+
+### Features
+
+* add CORS middleware and enforce SSL redirection in ingress configuration ([d344a60](https://github.com/wize-works/wize-comment/commit/d344a60674edc0ea3054b97de8c1f21d6332a5bf))
+
 ## [1.4.8](https://github.com/wize-works/wize-comment/compare/v1.4.7...v1.4.8) (2025-04-28)
 
 
