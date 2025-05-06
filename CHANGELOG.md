@@ -1,3 +1,59 @@
+## [1.11.1](https://github.com/wize-works/wize-comment/compare/v1.11.0...v1.11.1) (2025-05-06)
+
+
+### Bug Fixes
+
+* update deploy.yml for non-interactive AKS auth ([6884fbb](https://github.com/wize-works/wize-comment/commit/6884fbbccd41f86768964fd444fbdc1dc376d4bc))
+
+# [1.11.0](https://github.com/wize-works/wize-comment/compare/v1.10.0...v1.11.0) (2025-05-06)
+
+
+### Features
+
+* update @wizeworks/graphql-factory-mongo to version 1.31.0 in package.json and package-lock.json ([d17e796](https://github.com/wize-works/wize-comment/commit/d17e7967cee2787dfb9839b4899f54ce30a232c0))
+
+# [1.10.0](https://github.com/wize-works/wize-comment/compare/v1.9.0...v1.10.0) (2025-05-04)
+
+
+### Features
+
+* update @wizeworks/graphql-factory-mongo to version 1.27.0 in package.json and package-lock.json ([32d25f9](https://github.com/wize-works/wize-comment/commit/32d25f92409b9fb3f4c9fb34d0f1ddc1c96729e4))
+
+# [1.9.0](https://github.com/wize-works/wize-comment/compare/v1.8.0...v1.9.0) (2025-05-03)
+
+
+### Features
+
+* update @wizeworks/graphql-factory-mongo to version 1.25.0 in package.json and package-lock.json ([a4f4311](https://github.com/wize-works/wize-comment/commit/a4f43118243213b4cb5a536dbf56e704621bc490))
+
+# [1.8.0](https://github.com/wize-works/wize-comment/compare/v1.7.0...v1.8.0) (2025-04-30)
+
+
+### Features
+
+* update @wizeworks/graphql-factory-mongo to version 1.24.0 in package.json and package-lock.json ([67a71c3](https://github.com/wize-works/wize-comment/commit/67a71c319a0d39f7759bf740aac10f2e36e590f8))
+
+# [1.7.0](https://github.com/wize-works/wize-comment/compare/v1.6.1...v1.7.0) (2025-04-30)
+
+
+### Features
+
+* update @wizeworks/graphql-factory-mongo to version 1.23.0 and enhance logging with Sentry integration ([f2e915b](https://github.com/wize-works/wize-comment/commit/f2e915b6869739c8facd299b0d20cbbe60c0de7b))
+
+## [1.6.1](https://github.com/wize-works/wize-comment/compare/v1.6.0...v1.6.1) (2025-04-29)
+
+
+### Bug Fixes
+
+* update @wizeworks/graphql-factory-mongo to version 1.21.4 in package.json and package-lock.json ([1458946](https://github.com/wize-works/wize-comment/commit/1458946d1ba5e644eb845e54d8c633b9c22032d6))
+
+# [1.6.0](https://github.com/wize-works/wize-comment/compare/v1.5.0...v1.6.0) (2025-04-28)
+
+
+### Features
+
+* add cors dependency to package.json and package-lock.json ([74e8236](https://github.com/wize-works/wize-comment/commit/74e8236c6db305fa8fc37588040e4ff24c644a1f))
+
 # [1.5.0](https://github.com/wize-works/wize-comment/compare/v1.4.8...v1.5.0) (2025-04-28)
 
 
