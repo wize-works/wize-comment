@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/wize-works/wize-comment/compare/v1.11.0...v1.11.1) (2025-05-06)
+
+
+### Bug Fixes
+
+* update deploy.yml for non-interactive AKS auth ([6884fbb](https://github.com/wize-works/wize-comment/commit/6884fbbccd41f86768964fd444fbdc1dc376d4bc))
+
 # [1.11.0](https://github.com/wize-works/wize-comment/compare/v1.10.0...v1.11.0) (2025-05-06)
 
 
